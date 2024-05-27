@@ -1,0 +1,23 @@
+
+<%- include('./templates/layout', { body: `
+    
+    <div class="container">
+        <h2>Dar de alta un nuevo prospecto</h2>
+        <form action="/Prospecto" method="POST"> <!-- Corregir la acción del formulario -->
+            <div class="form-group">
+                <label for="nombre">nombre:</label>
+                <input type="text" class="form-control" id="nombre" name="nombre" required>
+            </div>
+            <div class="form-group">
+                <label for="correo">Correo:</label>
+                <input type="email" class="form-control" id="correo" name="correo" required>
+            </div>
+            <div class="form-group">
+                <label for="fecha_registro">fecha de registro:</label>
+                <input type="text" class="form-control" id="fecha_registro" name="fecha_registro" required>
+            </div>
+            <button type="submit" class="btn btn-primary" value="submit">Registrar Vacante</button>
+        </form>
+    </div>
+
+    ` }) %>

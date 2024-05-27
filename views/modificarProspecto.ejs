@@ -1,0 +1,44 @@
+
+<!-- views/layouts/layout.ejs -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Hola!!</title>
+</head>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+<body>
+  <%- include('./templates/navbar') %>
+  <br>
+
+<br>
+  <main>
+    <div class="container">
+        <h2>Modificar un prospecto</h2>
+        <form action="/Prospecto/<%= prospecto_id %>" method="POST"> <!-- Corregir la acción del formulario -->
+            <div class="form-group">
+                <label for="prospecto">prospecto_id</label>
+                <input type="text" class="form-control" id="prospecto_id" name="prospecto_id" value="<%= prospecto_id %>" required>
+            </div>
+            <div class="form-group">
+                <label for="nombre">nombre:</label>
+                <input type="text" class="form-control" id="nombre" name="nombre"value="<%= nombre %>" required>
+            </div>
+            <div class="form-group">
+                <label for="correo">Correo:</label>
+                <input type="email" class="form-control" id="correo" name="correo" value="<%= correo %>"required>
+            </div>
+            <div class="form-group">
+                <label for="fecha_registro">fecha de registro:</label>
+                <input type="text" class="form-control" id="fecha_registro" name="fecha_registro" value="<%= fecha_registro %>" required>
+            </div>
+            <button type="submit" class="btn btn-primary" value="submit">Modificar prospecto</button>
+        </form>
+    </div>
+  </main>
+</body>
+</html>
+
+
+
